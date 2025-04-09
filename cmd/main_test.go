@@ -7,6 +7,15 @@ import (
 	"testing"
 )
 
+func TestUniqueSortedUserIDs(t *testing.T) {
+	a := assert.New(t)
+	a.Equal([]int64{}, pkgloop.UniqueSortedUserIDs([]int64{}))
+	a.Equal([]int64{10}, pkgloop.UniqueSortedUserIDs([]int64{10}))
+	a.Equal([]int64{55}, pkgloop.UniqueSortedUserIDs([]int64{55, 55}))
+	a.Equal([]int64{22, 33, 55}, pkgloop.UniqueSortedUserIDs([]int64{55, 55, 33, 22}))
+	a.Equal([]int64{2, 33, 55, 88, 103}, pkgloop.UniqueSortedUserIDs([]int64{55, 2, 88, 33, 2, 2, 55, 103, 33, 88}))
+}
+
 func TestMapSimple(t *testing.T) {
 	a := assert.New(t)
 	a.Equal([]string([]string(nil)), pkgloop.MapSimple([]string{}))

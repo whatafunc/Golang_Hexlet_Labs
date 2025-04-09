@@ -1,7 +1,8 @@
 ### Intro
 Here is my helper for Golang master classes on hexlet.io platform
 https://hexlet.io/u/whatafunc
-Automatic code reviews - paased example: https://hexlet.io/code_reviews/1769592
+Automatic code reviews - paased example: https://hexlet.io/code_reviews/1769592 // for
+https://hexlet.io/code_reviews/1771898 //sort slices
 
 ### Linters
 1. downloaded & executed
@@ -29,3 +30,4 @@ go test -v ./cmd/for/...
 
 # Run a specific test:
 go test -v ./cmd/for/... -run TestMap
+go test -v ./cmd/... -run TestUniqueSortedUserIDs

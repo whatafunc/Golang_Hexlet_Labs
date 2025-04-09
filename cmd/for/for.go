@@ -7,7 +7,7 @@ import (
 )
 func MapSimple(strs []string) []string{
   for _, chad := range strs {
-    fmt.Println("input is %s", strings.ToUpper(chad))
+    fmt.Println("input is ", strings.ToUpper(chad))
   }
 
   fmt.Println("_________________")
